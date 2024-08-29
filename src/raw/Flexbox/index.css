@@ -1,0 +1,43 @@
+.parent {
+    align-items: center;
+    border: 2px solid black;
+    display: flex;
+    min-height: 125px;
+  }
+
+  .box {
+    align-items: center;
+    background-color: blue;
+    border: 2px solid black;
+    color: white;
+    display: grid;
+    height: 100px;
+    text-align: center;
+    width: 100px;
+  }
+  
+.p1 {
+    justify-content: center;
+  }
+
+.p2 {
+    justify-content: space-between;
+
+  }
+
+  .p3 {
+    justify-content:space-around;
+
+  }
+  
+  .p4 {
+    gap: 10px;
+  }
+
+  .p4 .box:first-child {
+    margin-right: auto;
+  }
+
+  .p4 .box:last-child {
+    margin-left: auto;
+  }
