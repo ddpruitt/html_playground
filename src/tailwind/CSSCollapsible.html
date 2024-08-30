@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <title>Collapsable CSS HTML</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="flex justify-between items-center p-4 bg-gray-800 text-white">
+      <figure>
+        <img src="./content/favicon-32x32.png" alt="Logo" />
+      </figure>        
+      <nav>
+        <details class="parent p1 relative cursor-pointer">
+          <summary class="list-none">
+            <span>User Menu</span>
+          </summary>
+          <ul class="absolute right-full list-none w-max rounded bg-gray-800">
+            <li class="p-2 cursor-pointer hover:bg-gray-600">Profile</li>
+            <li>
+              <details>
+                <summary class="list-none">
+                  <span>Settings</span>
+                </summary>
+                <ul>
+                  <li class="p-2 cursor-pointer hover:bg-gray-600">Account</li>
+                  <li class="p-2 cursor-pointer hover:bg-gray-600">Change Password</li>
+                </ul>
+              </details>
+            </li>
+            <li class="p-2 cursor-pointer hover:bg-gray-600">Logout</li>
+          </ul>
+        </details>
+      </nav>
+    </header>
+
+    <main class="p-4">
+      <h1 class="text-2xl font-bold mb-4">Welcome to the Collapsible CSS HTML Page</h1>
+      <p class="mb-4">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc leo metus,
+        placerat in enim sed, tristique tincidunt massa. Vestibulum porttitor
+        quis nulla elementum cursus. Cras vulputate sapien nisl, sed aliquet
+        ipsum rutrum vel. Vestibulum ut nisl et nisl mollis pharetra pharetra
+        eget odio. Quisque et lorem nec lacus convallis hendrerit. Pellentesque
+        feugiat non purus ut pulvinar. Phasellus sit amet aliquet neque.
+      </p>
+      <p>
+        Suspendisse fermentum at sem eu tincidunt. Morbi feugiat magna a nisl
+        sagittis sodales. Pellentesque efficitur, ligula in luctus venenatis,
+        elit tellus commodo leo, eget ullamcorper turpis velit quis enim. Nam
+        vitae placerat mauris, at auctor leo. Pellentesque suscipit porttitor
+        velit, sit amet convallis massa mollis in. Cras maximus risus eget
+        fermentum placerat. Nunc egestas elementum tortor quis consectetur.
+        Morbi eleifend sodales risus quis tincidunt. Morbi in diam eget sapien
+        pretium scelerisque vel nec odio. Phasellus nec fermentum dui. Duis
+        mattis turpis at velit malesuada fringilla. Quisque porta, nibh auctor
+        pellentesque maximus, nisi arcu luctus mi, at eleifend justo lacus non
+        ex. Duis quam leo, aliquam et sagittis vitae, tempor nec leo.
+        Suspendisse velit tortor, porta eu velit ac, maximus tristique diam.
+      </p>
+    </main>
+
+    <footer class="p-4 text-center">
+      <p>CopyLeft Goes Here</p>
+    </footer>
+  </body>
+</html>

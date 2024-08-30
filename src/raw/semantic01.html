@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Elements Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header, footer {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        nav li {
+            margin-right: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #337ab7;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        article {
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        aside {
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        figure {
+            margin: 20px;
+        }
+        figcaption {
+            font-size: 14px;
+            color: #666;
+        }
+        details {
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+        }
+        mark {
+            background-color: yellow;
+        }
+        time {
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Semantic Elements Example</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <article>
+            <h2>Article Title</h2>
+            <p>This is an article with some content. <mark>Highlighted text</mark> can be used to draw attention to specific parts.</p>
+            <figure>
+                <img src="image.jpg" alt="An image">
+                <figcaption>Figure caption</figcaption>
+            </figure>
+            <p>Published on <time datetime="2023-04-15">April 15, 2023</time>.</p>
+        </article>
+        <aside>
+            <h3>Aside Title</h3>
+            <p>This is an aside with some content. It can be used for secondary information.</p>
+        </aside>
+        <details>
+            <summary>Details Summary</summary>
+            <p>This is the detailed content. It is hidden by default and can be expanded.</p>
+        </details>
+    </main>
+    <footer>
+        <p>&copy; 2023 Semantic Elements Example</p>
+    </footer>
+</body>
+</html>

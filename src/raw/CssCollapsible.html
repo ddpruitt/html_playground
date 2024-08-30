@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <title>Collapsable CSS HTML</title>
+    <style>
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background-color: #333;
+            color: #fff;
+        }
+
+        header details {
+            position: relative;
+            cursor: pointer;
+        }
+
+        header details ul {            
+            position: absolute;
+            right: 100%;
+            list-style: none;
+            width: max-content;
+            border-radius: 5px;
+            background-color: #333;
+        }
+
+        header details ul li {
+            padding: 0.5rem;
+            cursor: pointer;
+        }
+
+        header details ul li:hover {
+            background-color: #555;
+        }
+        header details summary{
+            list-style: none;
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+        <figure>
+            <img src="./content/favicon-32x32.png" alt="Logo" />
+        </figure>        
+      <nav>
+        <details class="parent p1">
+          <summary>
+            <span>User Menu</span>
+          </summary>
+          <ul>
+            <li>Profile</li>
+            <li>
+                <details>
+                    <summary>
+                        <span>Settings</span>
+                    </summary>
+                    <ul>
+                        <li>Account</li>
+                        <li>Change Password</li>
+                    </ul>
+            </li>
+            <li>Logout</li>
+          </ul>
+        </details>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Welcome to the Collapsible CSS HTML Page</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc leo metus,
+        placerat in enim sed, tristique tincidunt massa. Vestibulum porttitor
+        quis nulla elementum cursus. Cras vulputate sapien nisl, sed aliquet
+        ipsum rutrum vel. Vestibulum ut nisl et nisl mollis pharetra pharetra
+        eget odio. Quisque et lorem nec lacus convallis hendrerit. Pellentesque
+        feugiat non purus ut pulvinar. Phasellus sit amet aliquet neque.
+      </p>
+      <p>
+        Suspendisse fermentum at sem eu tincidunt. Morbi feugiat magna a nisl
+        sagittis sodales. Pellentesque efficitur, ligula in luctus venenatis,
+        elit tellus commodo leo, eget ullamcorper turpis velit quis enim. Nam
+        vitae placerat mauris, at auctor leo. Pellentesque suscipit porttitor
+        velit, sit amet convallis massa mollis in. Cras maximus risus eget
+        fermentum placerat. Nunc egestas elementum tortor quis consectetur.
+        Morbi eleifend sodales risus quis tincidunt. Morbi in diam eget sapien
+        pretium scelerisque vel nec odio. Phasellus nec fermentum dui. Duis
+        mattis turpis at velit malesuada fringilla. Quisque porta, nibh auctor
+        pellentesque maximus, nisi arcu luctus mi, at eleifend justo lacus non
+        ex. Duis quam leo, aliquam et sagittis vitae, tempor nec leo.
+        Suspendisse velit tortor, porta eu velit ac, maximus tristique diam.
+      </p>
+    </main>
+
+    <footer>
+        <p>CopyLeft Goes Here</p>
+    </footer>
+  </body>
+</html>
