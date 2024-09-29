@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic HTML Page</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <h1>The grid-template-areas Property</h1>
+
+    <h2>Grid Template Areas</h2>
+
+    <pre>
+      .container10 {
+        display: grid;
+        grid-gap: 0.5rem;
+        grid-template-rows: repeat(7, 2rem);
+        grid-template-columns: repeat(5, 1 fr);
+        grid-template-areas:
+          "  item1 item1 item1 item1 item4  "
+          "  .     item3 item3 item3 item4  "
+          "  item5 item3 item3 item3 item4  "
+          "  item5 item3 item3 item3 item4  "
+          "  item5 item3 item3 item3 item4  "
+          "  .     item3 item3 item3 item4  "
+          "  item2  item2    item2  item2 item2  ";
+      }
+    </pre>
+
+    <div class="container container10">
+      <div class="item item101">A</div>
+      <div class="item item102">B</div>
+      <div class="item item103">C</div>
+      <div class="item item104">D</div>
+      <div class="item item105">E</div>
+    </div>
+
+    <h2>Grid Template Areas</h2>
+    
+    <pre>
+      .container20 {
+        display: grid;
+        grid-gap: 0.5rem;
+        grid-template-rows: repeat(3, 2rem);
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-areas: 
+          ".     .     .     . item3"
+          "item1 item2 item2 . item3"
+          ".     item2 item2 . ."
+          ;
+      }
+    </pre>
+
+    <div class="container container20">
+      <div class="item item201">1</div>
+      <div class="item item202">2</div>
+      <div class="item item203">3</div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

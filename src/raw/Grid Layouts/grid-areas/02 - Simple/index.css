@@ -1,0 +1,52 @@
+body {
+  padding: 20px;
+  font-family: Arial, sans-serif;  
+}
+
+.item {
+  color: darkorange;
+  background: blue;
+  justify-content: center;
+  text-align: center;
+}
+
+.container {
+  background: black;
+}
+
+.container10 {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-rows: repeat(7, 2rem);
+  grid-template-columns: repeat(5, 1 fr);
+  grid-template-areas:
+    "  item1 item1 item1 item1 item4  "
+    "  .     item3 item3 item3 item4  "
+    "  item5 item3 item3 item3 item4  "
+    "  item5 item3 item3 item3 item4  "
+    "  item5 item3 item3 item3 item4  "
+    "  .     item3 item3 item3 item4  "
+    "  item2  item2    item2  item2 item2  ";
+}
+
+.container10 .item101 { grid-area: item1; }
+.container10 .item102 { grid-area: item2; }
+.container10 .item103 { grid-area: item3; }
+.container10 .item104 { grid-area: item4; }
+.container10 .item105 { grid-area: item5; }
+
+.container20 {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-rows: repeat(3, 2rem);
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas: 
+    ".     .     .     . item3"
+    "item1 item2 item2 . item3"
+    ".     item2 item2 . ."
+    ;
+}
+
+.container20 .item201 { grid-area: item1; }
+.container20 .item202 { grid-area: item2; }
+.container20 .item203 { grid-area: item3; }
