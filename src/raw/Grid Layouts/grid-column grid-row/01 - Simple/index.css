@@ -1,5 +1,4 @@
 :root {
-    
           /** CSS PRIMARY COLORS */ 
           --color-primary-a0:   #ffffff;
           --color-primary-a10:  #d3eff4;
@@ -12,54 +11,78 @@
           --color-primary-a90:  #000000;  
 }
 
-.parent {
+/* Grid Layout */
+.container01 {
     display: grid;
+    gap: 8px;    
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    gap: 8px;
-    padding: 8px;
+    padding: 0.5rem;
+}
+
+.item {
+    padding-left: 0.25rem;
+}
+    
+.item1 {
+    grid-column: span 3 / span 3;
+    grid-row: span 4 / span 4;
+}
+
+.item2, .item3, .item4, .item5 {
+    grid-column: span 2 / span 2;
+    grid-column-start: 4;
+}
+
+.item2 {
+    grid-row-start: 1;
+}
+
+.item3 {
+    grid-row-start: 2;
+}
+
+.item4 {
+    grid-row-start: 3;
+}
+
+.item5 {
+    grid-row-start: 4;
+}
+
+.item6 {
+    grid-column: span 5 / span 5;
+    grid-row-start: 5;
+}
+
+/* Colors */
+
+.container01 {
     background: var(--color-primary-a90);
     color: var(--color-primary-a0);
 }
-    
-.div1 {
-    grid-column: span 3 / span 3;
-    grid-row: span 4 / span 4;
+
+.item1 {
     background: var(--color-primary-a90);
     color: var(--color-primary-a10);
-    padding-left: 3px;
 }
 
-.div2, .div3, .div4, .div5 {
-    grid-column: span 2 / span 2;
-    grid-column-start: 4;
-    padding: 3px;
-}
-
-.div2 {
-    grid-row-start: 1;
+.item2 {
     background: var(--color-primary-a30);
 }
 
-.div3 {
-    grid-row-start: 2;
+.item3 {
     background: var(--color-primary-a50);
 }
 
-.div4 {
-    grid-row-start: 3;
+.item4 {
     background: var(--color-primary-a60);
 }
 
-.div5 {
-    grid-row-start: 4;
+.item5 {
     background: var(--color-primary-a70);
 }
 
-.div6 {
-    grid-column: span 5 / span 5;
-    grid-row-start: 5;
+.item6 {
     background: var(--color-primary-a80);
-    padding-left: 3px;
 }
-

@@ -1,32 +1,45 @@
+:root {
+  /** CSS PRIMARY COLORS */ 
+  --color-primary-a0:   #ffffff;
+  --color-primary-a10:  #d3eff4;
+  --color-primary-a20:  #a4dee9;
+  --color-primary-a30:  #6ecddf; 
+  --color-primary-a50:  #00bcd4;
+  --color-primary-a60:  #1c899a;
+  --color-primary-a70:  #1e5a64;
+  --color-primary-a80:  #172e33;
+  --color-primary-a90:  #000000;  
+}
+
 body {
-  padding: 20px;
+  padding: 1rem;
   font-family: Arial, sans-serif;  
 }
 
-.item {
-  color: darkorange;
-  background: blue;
-  justify-content: center;
-  text-align: center;
+.container {
+  padding: 0.5rem;
 }
 
-.container {
-  background: black;
+.item {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
 
 .container10 {
   display: grid;
-  grid-gap: 0.5rem;
+  gap: 0.5rem;
   grid-template-rows: repeat(7, 2rem);
   grid-template-columns: repeat(5, 1 fr);
   grid-template-areas:
-    "  item1 item1 item1 item1 item4  "
-    "  .     item3 item3 item3 item4  "
-    "  item5 item3 item3 item3 item4  "
-    "  item5 item3 item3 item3 item4  "
-    "  item5 item3 item3 item3 item4  "
-    "  .     item3 item3 item3 item4  "
-    "  item2  item2    item2  item2 item2  ";
+  "  item1 item1 item1 item1 item4  "
+  "  .     item3 item3 item3 item4  "
+  "  item2 item3 item3 item3 item4  "
+  "  item2 item3 item3 item3 item4  "
+  "  item2 item3 item3 item3 item4  "
+  "  .     item3 item3 item3 item4  "
+  "  item5  item5    item5  item5 item5  ";
 }
 
 .container10 .item101 { grid-area: item1; }
@@ -37,16 +50,26 @@ body {
 
 .container20 {
   display: grid;
-  grid-gap: 0.5rem;
+  gap: 0.5rem;
   grid-template-rows: repeat(3, 2rem);
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-areas: 
-    ".     .     .     . item3"
-    "item1 item2 item2 . item3"
-    ".     item2 item2 . ."
+    "item1 .     .     item3"
+    "item1 item2 item2 item3"
+    ".     item2 item2 ."
     ;
 }
 
 .container20 .item201 { grid-area: item1; }
 .container20 .item202 { grid-area: item2; }
 .container20 .item203 { grid-area: item3; }
+
+/* Colors */
+.container {
+  background: var(--color-primary-a80);
+  color: var(--color-primary-a0);
+}
+
+.item {
+  background: var(--color-primary-a60);
+}
