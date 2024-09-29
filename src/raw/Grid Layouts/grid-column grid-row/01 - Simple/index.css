@@ -14,7 +14,9 @@
 /* Grid Layout */
 .container01 {
     display: grid;
-    gap: 8px;    
+    
+    /* gap row column */
+    gap: 5px 10px;    
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
     padding: 0.5rem;
