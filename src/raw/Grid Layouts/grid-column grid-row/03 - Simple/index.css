@@ -1,0 +1,51 @@
+:root {
+  /** CSS PRIMARY COLORS */
+  --color-primary-a0: #ffffff;
+  --color-primary-a10: #d3eff4;
+  --color-primary-a20: #a4dee9;
+  --color-primary-a30: #6ecddf;
+  --color-primary-a50: #00bcd4;
+  --color-primary-a60: #1c899a;
+  --color-primary-a70: #1e5a64;
+  --color-primary-a80: #172e33;
+  --color-primary-a90: #000000;
+}
+
+body {
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+/* Grid Layout */
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+  grid-auto-rows: 5rem;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  align-items: center;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 5rem;
+  height: 5rem;
+  border-width: 0.1rem;
+  border-style: solid;
+
+}
+/* Colors */
+
+.container {
+  background: var(--color-primary-a80);
+  color: var(--color-primary-a0);
+}
+
+.item {
+  background: var(--color-primary-a60);
+  border-color: var(--color-primary-a0);
+}
