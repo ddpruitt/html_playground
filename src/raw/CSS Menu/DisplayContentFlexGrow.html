@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            display: grid;
+        }
+        nav {
+
+            display: flex;
+            border: 1px solid black;
+            --spacing: 10px;
+            gap: var(--spacing);
+            padding: var(--spacing);
+        }
+        /* Important to note for accessibility, use only on wrappers, not h1 → h6, table, button and ol ul lists */
+        .actions {
+            display: contents;
+        }
+
+        input[type="search"] {
+            flex-grow: 1;
+        }
+
+        .item {
+            padding: .5px;
+            border: 1px solid black;
+        }
+    </style>
+  </head>
+  <body>
+    <nav>
+    <a href="#" class="item" ><i class="fa-regular fa-circle-dot"></i></a>
+    <a href="#" class="item" ><i class="fa-solid fa-code-pull-request"></i></a>
+    <a href="#" class="item" ><i class="fa-solid fa-inbox"></i></a>
+    <div class="actions">
+        <input type=""search" class="item"></input>
+        <label for="search" class="item"><i class="fa-solid fa-magnifying-glass"></i></label>
+        <a class="item" href="#"><i class="fa-regular fa-circle-xmark"></i></a>
+    </div>
+  </body>
+</html>
