@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Mason Layout</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f0f0f0;
+      }
+
+      .mason-container {
+        column-count: 3;
+        column-gap: 20px;
+      }
+
+      .mason-item {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 20px;
+        margin-bottom: 20px;
+        break-inside: avoid;
+      }
+
+      /* Responsive design */
+      @media (max-width: 768px) {
+        .mason-container {
+          column-count: 2;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .mason-container {
+          column-count: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Masonry Layout Example</h1>
+    <p>A Masonry Layout is a grid-like layout where items are positioned optimally based on the available vertical space, similar to how a mason would lay bricks.</p>
+    <div class="mason-container">
+      <div class="mason-item">Item 1</div>
+      <div class="mason-item">Item 2</div>
+      <div class="mason-item">Item 3</div>
+      <div class="mason-item">Item 4</div>
+      <div class="mason-item">Item 5</div>
+      <div class="mason-item">Item 6</div>
+      <div class="mason-item">Item 7</div>
+      <div class="mason-item">Item 8</div>
+      <div class="mason-item">Item 9</div>
+      <div class="mason-item">Item 10</div>
+    </div>
+  </body>
+</html>

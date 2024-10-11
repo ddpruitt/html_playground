@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mason Layout with Different Heights</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f0f0f0;
+      }
+
+      .mason-container {
+        column-count: 3;
+        column-gap: 20px;
+      }
+
+      .mason-item {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 20px;
+        margin-bottom: 20px;
+        break-inside: avoid;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Different background colors for each item */
+      .mason-item:nth-child(1) {
+        background-color: #ffcccb;
+      }
+      .mason-item:nth-child(2) {
+        background-color: #ffdab9;
+      }
+      .mason-item:nth-child(3) {
+        background-color: #e6e6fa;
+      }
+      .mason-item:nth-child(4) {
+        background-color: #98fb98;
+      }
+      .mason-item:nth-child(5) {
+        background-color: #add8e6;
+      }
+      .mason-item:nth-child(6) {
+        background-color: #f0e68c;
+      }
+      .mason-item:nth-child(7) {
+        background-color: #dda0dd;
+      }
+      .mason-item:nth-child(8) {
+        background-color: #87cefa;
+      }
+      .mason-item:nth-child(9) {
+        background-color: #fafad2;
+      }
+      .mason-item:nth-child(10) {
+        background-color: #d3d3d3;
+      }
+
+      /* Responsive design */
+      @media (max-width: 768px) {
+        .mason-container {
+          column-count: 2;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .mason-container {
+          column-count: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Masonry Layout Example</h1>
+    <p>A Masonry Layout is a grid-like layout where items are positioned optimally based on the available vertical space, similar to how a mason would lay bricks.</p>
+    <p>Each item has a different height which better demonstrates the masonry effect.</p>
+
+    <div class="mason-container">
+      <div class="mason-item">Item 1</div>
+      <div class="mason-item">Item 2<br />Extra content</div>
+      <div class="mason-item">Item 3<br />More<br />content</div>
+      <div class="mason-item">Item 4</div>
+      <div class="mason-item">Item 5<br />Extra<br />content<br />here</div>
+      <div class="mason-item">Item 6<br />Some more</div>
+      <div class="mason-item">Item 7</div>
+      <div class="mason-item">Item 8<br />Additional<br />text</div>
+      <div class="mason-item">Item 9<br />Even<br />more<br />content</div>
+      <div class="mason-item">Item 10</div>
+    </div>
+  </body>
+</html>
