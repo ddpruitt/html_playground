@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic HTML Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                a0: '#ffffff',
+                a10: '#d3eff4',
+                a20: '#a4dee9',
+                a30: '#6ecddf',
+                a50: '#00bcd4',
+                a60: '#1c899a',
+                a70: '#1e5a64',
+                a80: '#172e33',
+                a90: '#000000',
+              },
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      .grid-areas-1 {
+        grid-template-areas:
+          "item1 item1 item1 item1 item4"
+          ".     item3 item3 item3 item4"
+          "item2 item3 item3 item3 item4"
+          "item2 item3 item3 item3 item4"
+          "item2 item3 item3 item3 item4"
+          ".     item3 item3 item3 item4"
+          "item5 item5 item5 item5 item5";
+      }
+      .grid-areas-2 {
+        grid-template-areas:
+          "item1 .     .     item3"
+          "item1 item2 item2 item3"
+          ".     item2 item2 .    ";
+      }
+    </style>
+  </head>
+  <body class="p-4 font-sans">
+    <h1 class="text-2xl font-bold mb-4">The grid-template-areas Property</h1>
+
+    <h2 class="text-xl font-semibold mb-2">Grid Template Areas</h2>
+
+    <div class="grid grid-areas-1 gap-2 bg-primary-a80 text-primary-a0 p-2">
+      <div class="[grid-area:item1] flex justify-center items-center bg-primary-a60">A</div>
+      <div class="[grid-area:item2] flex justify-center items-center bg-primary-a60">B</div>
+      <div class="[grid-area:item3] flex justify-center items-center bg-primary-a60">C</div>
+      <div class="[grid-area:item4] flex justify-center items-center bg-primary-a60">D</div>
+      <div class="[grid-area:item5] flex justify-center items-center bg-primary-a60">E</div>
+    </div>
+
+    <h2 class="text-xl font-semibold mt-4 mb-2">Grid Template Areas</h2>
+
+    <div class="grid grid-areas-2 gap-2 bg-primary-a80 text-primary-a0 p-2">
+      <div class="[grid-area:item1] flex justify-center items-center bg-primary-a60">A</div>
+      <div class="[grid-area:item2] flex justify-center items-center bg-primary-a60">B</div>
+      <div class="[grid-area:item3] flex justify-center items-center bg-primary-a60">C</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic HTML Page</title>
+    <style>
+      :root {
+        /** CSS PRIMARY COLORS */
+        --color-primary-a0: #ffffff;
+        --color-primary-a10: #d3eff4;
+        --color-primary-a20: #a4dee9;
+        --color-primary-a30: #6ecddf;
+        --color-primary-a50: #00bcd4;
+        --color-primary-a60: #1c899a;
+        --color-primary-a70: #1e5a64;
+        --color-primary-a80: #172e33;
+        --color-primary-a90: #000000;
+      }
+
+      /* Grid Layout */
+      .container01 {
+        display: grid;
+
+        /* gap row column */
+        gap: 5px 10px;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        padding: 0.5rem;
+      }
+
+      .item {
+        padding-left: 0.25rem;
+      }
+
+      .item1 {
+        grid-column: span 3 / span 3;
+        grid-row: span 4 / span 4;
+      }
+
+      .item2,
+      .item3,
+      .item4,
+      .item5 {
+        grid-column: span 2 / span 2;
+        grid-column-start: 4;
+      }
+
+      .item2 {
+        grid-row-start: 1;
+      }
+
+      .item3 {
+        grid-row-start: 2;
+      }
+
+      .item4 {
+        grid-row-start: 3;
+      }
+
+      .item5 {
+        grid-row-start: 4;
+      }
+
+      .item6 {
+        grid-column: span 5 / span 5;
+        grid-row-start: 5;
+      }
+
+      /* Colors */
+
+      .container01 {
+        background: var(--color-primary-a90);
+        color: var(--color-primary-a0);
+      }
+
+      .item1 {
+        background: var(--color-primary-a90);
+        color: var(--color-primary-a10);
+      }
+
+      .item2 {
+        background: var(--color-primary-a30);
+      }
+
+      .item3 {
+        background: var(--color-primary-a50);
+      }
+
+      .item4 {
+        background: var(--color-primary-a60);
+      }
+
+      .item5 {
+        background: var(--color-primary-a70);
+      }
+
+      .item6 {
+        background: var(--color-primary-a80);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to the Basic HTML Page</h1>
+
+    <div class="container01">
+      <div class="item item1">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc leo
+          metus, placerat in enim sed, tristique tincidunt massa. Vestibulum
+          porttitor quis nulla elementum cursus. Cras vulputate sapien nisl, sed
+          aliquet ipsum rutrum vel. Vestibulum ut nisl et nisl mollis pharetra
+          pharetra eget odio. Quisque et lorem nec lacus convallis hendrerit.
+          Pellentesque feugiat non purus ut pulvinar. Phasellus sit amet aliquet
+          neque.
+        </p>
+        <p>
+          Suspendisse fermentum at sem eu tincidunt. Morbi feugiat magna a nisl
+          sagittis sodales. Pellentesque efficitur, ligula in luctus venenatis,
+          elit tellus commodo leo, eget ullamcorper turpis velit quis enim. Nam
+          vitae placerat mauris, at auctor leo. Pellentesque suscipit porttitor
+          velit, sit amet convallis massa mollis in. Cras maximus risus eget
+          fermentum placerat. Nunc egestas elementum tortor quis consectetur.
+          Morbi eleifend sodales risus quis tincidunt. Morbi in diam eget sapien
+          pretium scelerisque vel nec odio. Phasellus nec fermentum dui. Duis
+          mattis turpis at velit malesuada fringilla. Quisque porta, nibh auctor
+          pellentesque maximus, nisi arcu luctus mi, at eleifend justo lacus non
+          ex. Duis quam leo, aliquam et sagittis vitae, tempor nec leo.
+          Suspendisse velit tortor, porta eu velit ac, maximus tristique diam.
+        </p>
+      </div>
+      <div class="item item2">1</div>
+      <div class="item item3">2</div>
+      <div class="item item4">3</div>
+      <div class="item item5">4</div>
+      <div class="item item6">
+        <p>
+          Fusce consequat ultrices quam in placerat. Aenean ultrices urna
+          libero, vitae elementum mi pulvinar sit amet. Suspendisse efficitur
+          elit eu laoreet aliquet. Donec gravida auctor rhoncus. Etiam quis mi
+          condimentum, interdum lectus nec, fermentum mi. Curabitur at lorem in
+          orci commodo maximus. Etiam pretium turpis non arcu tempus, eget
+          vulputate nisi bibendum. Donec gravida ligula metus, non elementum
+          velit faucibus in. Nullam volutpat dictum purus, dapibus imperdiet
+          risus malesuada sit amet. Sed eget magna semper, bibendum libero eget,
+          placerat lorem. Nulla molestie facilisis lacus convallis commodo. In
+          eu nisi tristique, tincidunt elit nec, vestibulum purus. Donec
+          lobortis laoreet diam ut dapibus.
+        </p>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

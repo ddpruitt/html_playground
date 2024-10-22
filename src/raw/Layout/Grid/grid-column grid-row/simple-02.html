@@ -1,10 +1,83 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Basic HTML Page</title>
-    <link rel="stylesheet" href="index.css" />
+    <style>
+      :root {
+        /** CSS PRIMARY COLORS */
+        --color-primary-a0: #ffffff;
+        --color-primary-a10: #d3eff4;
+        --color-primary-a20: #a4dee9;
+        --color-primary-a30: #6ecddf;
+        --color-primary-a50: #00bcd4;
+        --color-primary-a60: #1c899a;
+        --color-primary-a70: #1e5a64;
+        --color-primary-a80: #172e33;
+        --color-primary-a90: #000000;
+      }
+
+      body {
+        padding: 1rem;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Grid Layout */
+
+      .container01 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 0.5rem;
+
+        padding: 0.5rem;
+        border-width: 0.1rem;
+        border-style: solid;
+        border-radius: 1rem;
+      }
+
+      .container02 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 0.5rem;
+
+        padding: 1rem;
+        border-width: 0.1rem;
+        border-style: solid;
+        border-radius: 1rem;
+      }
+
+      .item {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+
+        border-width: 0.1rem;
+        border-style: solid;
+        border-radius: 1rem;
+        padding: 0.3rem;
+      }
+
+      /* Colors */
+
+      .container01 {
+        background: var(--color-primary-a80);
+        color: var(--color-primary-a0);
+      }
+
+      .container02 {
+        background: var(--color-primary-a20);
+        color: var(--color-primary-a90);
+      }
+
+      .item {
+        background: var(--color-primary-a60);
+        border-color: var(--color-primary-a0);
+      }
+    </style>
   </head>
   <body>
     <h1>Grid within a Grid Layout</h1>
