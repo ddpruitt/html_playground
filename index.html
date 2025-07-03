@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Playground</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(-45deg, #FE4C6F, #531319, #8B2030, #FE4C6F);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            min-height: 100vh;
+            color: #FFFFFE;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 254, 0.1) 50%, transparent 70%);
+            animation: shine 3s ease-in-out infinite;
+        }
+
+        @keyframes shine {
+            0%, 100% { transform: translateX(-100%); }
+            50% { transform: translateX(100%); }
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .playground-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .playground-card {
+            background: rgba(255, 255, 254, 0.1);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 254, 0.2);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .playground-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(254, 76, 111, 0.1), rgba(139, 32, 48, 0.1));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .playground-card:hover::before {
+            opacity: 1;
+        }
+
+        .playground-card:hover {
+            transform: translateY(-5px);
+            border-color: #FE4C6F;
+            box-shadow: 0 10px 30px rgba(254, 76, 111, 0.3);
+        }
+
+        .playground-card h3 {
+            color: #FE4C6F;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .playground-card p {
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .playground-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        a:link, a:visited {
+            background-color: #FE4C6F;
+            color: #FFFFFE;
+            border: 2px solid #8B2030;
+            padding: 12px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            position: relative;
+            overflow: hidden;
+        }
+
+        a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 254, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        a:hover::before {
+            left: 100%;
+        }
+
+        a:hover, a:active {
+            background-color: #8B2030;
+            color: #FE4C6F;
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(139, 32, 48, 0.4);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin: 3rem 0 2rem 0;
+            color: #FFFFFE;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .category-badge {
+            background: #531319;
+            color: #FFFFFE;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 1rem;
+            border: 1px solid #8B2030;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        footer p {
+            opacity: 0.8;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .playground-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>HTML Playground</h1>
+        <p>Explore Creative Web Development Examples & Experiments</p>
+    </div>
+
+    <div class="container">
+        <h2 class="section-title">🎨 Raw CSS Playgrounds</h2>
+        
+        <div class="playground-grid">
+            <div class="playground-card">
+                <div class="category-badge">Interactive Menus</div>
+                <h3>CSS Menu System</h3>
+                <p>Demonstrates collapsible navigation menus using pure CSS and HTML &lt;details&gt; elements. Features nested dropdowns, hover effects, and responsive design without JavaScript.</p>
+                <div class="playground-links">
+                    <a href="src/raw/CSS Menu/CssCollapsible.html">Collapsible Menu</a>
+                    <a href="src/raw/CSS Menu/DisplayContentFlexGrow.html">Flex Menu</a>
+                </div>
+            </div>
+
+            <div class="playground-card">
+                <div class="category-badge">Animations</div>
+                <h3>CSS Scroll Animations</h3>
+                <p>Infinite scroll animations created with pure CSS keyframes. Showcases smooth, continuous scrolling effects with masking and timing functions for professional carousel-like experiences.</p>
+                <div class="playground-links">
+                    <a href="src/raw/CSS Scroll/01 - simple/infinitscroll01.html">Simple Scroll</a>
+                    <a href="src/raw/CSS Scroll/01 - simple/infinitscroll02.html">Advanced Scroll</a>
+                </div>
+            </div>
+
+            <div class="playground-card">
+                <div class="category-badge">Layout Systems</div>
+                <h3>CSS Layout Techniques</h3>
+                <p>Comprehensive examples of modern CSS layout methods including Flexbox arrangements, CSS Grid systems, and Masonry layouts. Perfect for understanding responsive design patterns.</p>
+                <div class="playground-links">
+                    <a href="src/raw/Layout/Flexbox/">Flexbox Examples</a>
+                    <a href="src/raw/Layout/Grid/">Grid Layouts</a>
+                    <a href="src/raw/Layout/Masonry/">Masonry Layouts</a>
+                </div>
+            </div>
+
+            <div class="playground-card">
+                <div class="category-badge">HTML5 Standards</div>
+                <h3>Semantic HTML Elements</h3>
+                <p>Proper usage of HTML5 semantic elements including &lt;article&gt;, &lt;aside&gt;, &lt;figure&gt;, &lt;details&gt;, and &lt;time&gt;. Demonstrates accessible markup and SEO-friendly structure.</p>
+                <div class="playground-links">
+                    <a href="src/raw/Semantic/semantic01.html">Semantic Demo</a>
+                </div>
+            </div>
+
+            <div class="playground-card">
+                <div class="category-badge">Mathematical Markup</div>
+                <h3>MathML Examples</h3>
+                <p>Mathematical notation rendered natively in HTML using MathML. Shows how to display complex mathematical expressions, formulas, and equations directly in web browsers.</p>
+                <div class="playground-links">
+                    <a href="src/raw/MathML/simple.html">MathML Demo</a>
+                </div>
+            </div>
+
+            <div class="playground-card">
+                <div class="category-badge">Starter Templates</div>
+                <h3>HTML Templates</h3>
+                <p>Basic HTML page templates with common structures and patterns. Great starting points for new projects with semantic markup and accessible design foundations.</p>
+                <div class="playground-links">
+                    <a href="src/raw/Templates/01 - Basic/">Basic Template 1</a>
+                    <a href="src/raw/Templates/02 - Basic/">Basic Template 2</a>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">⚡ Tailwind CSS Playgrounds</h2>
+        
+        <div class="playground-grid">
+            <div class="playground-card">
+                <div class="category-badge">Utility-First CSS</div>
+                <h3>Tailwind Collapsible Menu</h3>
+                <p>Same collapsible menu functionality as the raw CSS version, but implemented using Tailwind CSS utility classes. Demonstrates rapid prototyping with utility-first CSS framework.</p>
+                <div class="playground-links">
+                    <a href="src/tailwind/CSSCollapsible.html">Tailwind Menu</a>
+                </div>
+            </div>
+
+            <div class="playground-card">
+                <div class="category-badge">Flexbox with Tailwind</div>
+                <h3>Tailwind Flexbox Layouts</h3>
+                <p>Flexbox layout examples using Tailwind CSS classes. Shows different flex arrangements including justify-center, justify-between, justify-around, and margin-auto techniques.</p>
+                <div class="playground-links">
+                    <a href="src/tailwind/Flexbox/flex-tw01.html">Flex Demo 1</a>
+                    <a href="src/tailwind/Flexbox/flex-tw02.html">Flex Demo 2</a>
+                </div>
+            </div>
+
+            <div class="playground-card">
+                <div class="category-badge">Grid with Tailwind</div>
+                <h3>Tailwind Grid Systems</h3>
+                <p>CSS Grid implementations using Tailwind utility classes. Features grid areas, responsive grids, and complex layout patterns achieved with minimal custom CSS.</p>
+                <div class="playground-links">
+                    <a href="src/tailwind/Grid Layouts/grid-areas-02.html">Grid Areas</a>
+                    <a href="src/tailwind/Grid Layouts/index-tw01.html">Grid Layout 1</a>
+                    <a href="src/tailwind/Grid Layouts/index-tw02.html">Grid Layout 2</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>🚀 HTML Playground - Explore, Learn, and Create Amazing Web Experiences</p>
+    </footer>
+</body>
+</html>
